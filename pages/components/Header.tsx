@@ -1,16 +1,18 @@
 import React from "react";
 import config from "../index.json";
 
+
 const Header = () => {
   const navigation = config.navigation;
   return (
-    <div className="header">
+    <div className="h-14 bg-gray-100 sticky top-0 shadow-md bg-opacity-50 backdrop-blur-md">
       <div className="header__menu">
-        <ul className="flex px-8 lg:px-32 gap-x-10 content-center leading-0 h-0">
+        <ul className="flex px-8 lg:px-32 gap-x-20 content-center leading-0 h-0">
+          {/* <span className="mt-5 font-semibold">{config.hero.name}</span> */}
           {navigation.map((item) => (
-            <li className="mt-6 cursor-pointer" key={item.title}>
+            <li className="mt-4 cursor-pointer" key={item.title}>
               <a href={`#${item.title}`}>
-                {item.title}
+                <span className="font-semibold hover:underline underline-offset-4">{item.title}</span>
               </a>
             </li>
           ))}
