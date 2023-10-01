@@ -1,7 +1,6 @@
 import React from "react";
 import config from "../index.json";
 import Image from "next/image";
-import Head from 'next/head';
 
 // With Image
 // const About = () => {
@@ -40,9 +39,6 @@ const About = () => {
   const about = config.about;
   return (
     <div id="About" className="px-8 md:px-32 pb-32 content-center bg-gradient-to-r from-green-300 via-teal-500 to-violet-500">
-      <Head>
-        <title>About</title>
-      </Head>
       <h1 className="pt-14 uppercase font-bold text-center text-white text-bold text-4xl">{about.title}</h1>
       <div className="mt-16 flex flex-col align-center items-center">
         <div className="pt-8 md:py-0 md:w-1/2 text-white md:ml-4 text-center flex flex-col items-center font-semibold">

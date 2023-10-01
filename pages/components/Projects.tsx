@@ -1,16 +1,12 @@
 import React from "react";
 import config from "../index.json";
 import Image from "next/image";
-import Head from 'next/head';
 
 const Projects = () => {
   const projects = config.projects;
 
   return (
     <div id={projects.title} className="px-8 md:px-16 md:px-32 pb-16 bg-white">
-      <Head>
-        <title>Projects</title>
-      </Head>
       <h1 className="pt-14 uppercase font-bold text-center text-black text-bold text-4xl">{projects.title}</h1>
       <div className="projects__menu">
         <ul>
