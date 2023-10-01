@@ -14,14 +14,14 @@ const Footer = () => {
           <i className="devicon-twitter-original"></i>
         </a> */}
         <a rel="noreferrer" href={footer.linkedin} target="_blank">
-          <i className="devicon-linkedin-plain"></i>
+          <i className="devicon-linkedin-plain hover:text-neutral-300"></i>
         </a>
         <a rel="noreferrer" href={footer.github} target="_blank">
-          <i className="devicon-github-original"></i>
+          <i className="devicon-github-original hover:text-neutral-300"></i>
         </a>
       </div>
       <span className="text-sm text-center text-neutral-600">
-        {/* © {getYear()} - Template developed by <a href="https://www.dylanarveson.com">Dylan Arveson</a> */}
+        © {getYear()}
       </span>
     </div>
   );
