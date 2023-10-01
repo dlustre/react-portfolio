@@ -52,7 +52,7 @@ const About = () => {
           <div className="mt-6 bg-white bg-opacity-10 p-5 rounded">
             <span>{about.secondary}</span>
           </div>
-          <div className="mt-6 mx-auto md:mx-0 border-2 border-white py-1 px-2 w-36 text-center font-bold">
+          <div className="mt-6 mx-auto md:mx-0 border-2 border-white py-1 px-2 w-36 text-center font-bold hover:underline transition-all">
             <a target="_blank" href={about.resume} className="about__resume text-white text-l">View Resume</a>
           </div>
         </div>

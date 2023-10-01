@@ -12,7 +12,8 @@ export default function Document() {
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
       <Head>
         <link rel="icon" href="/react-portfolio/favicon.ico" />
-        <meta property="og:title" content="Dennis Lustre" key="title" />
+        <title>Dennis Lustre</title>
+        {/* <meta property="og:title" content="Dennis Lustre" key="title" /> */}
       </Head>
       <body className='text-black'>
         <NextScript />
