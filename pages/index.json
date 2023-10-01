@@ -21,7 +21,8 @@
     "title": "About me",
     "image": "/placeholder.png",
     "primary": "Hi! 👋 I'm a senior Computer Science major @ UC Irvine and I currently work as a Software Development Intern @ Thaddeus Resource Center. I love to take on projects with the goal of creating a great user experience. Lately, I've been honing my JavaScript and React for Web Development.",
-    "secondary": "When I'm not coding, I'm usually making music on FL Studio, playing old Nintendo games from my childhood, or playing basketball with friends."
+    "secondary": "When I'm not coding, I'm usually making music on FL Studio, playing old Nintendo games from my childhood, or playing basketball with friends.",
+    "resume": "/react-portfolio/DennisLustre.pdf"
   },
   "projects": {
     "title": "Projects",
@@ -31,7 +32,7 @@
         "description": "Browser game with user authentication and a real-time leaderboard.",
         "url": "https://dlustre.github.io/aimtrainerv2/",
         "github": "https://github.com/dlustre/aimtrainerv2",
-        "image": "/aimTrainerDemo.gif",
+        "image": "/react-portfolio/aimTrainerDemo.gif",
         "tags": [
           "JavaScript",
           "React",
@@ -45,7 +46,7 @@
         "description": "A Discord bot with a unique way to render images in real-time.",
         "url": "",
         "github": "https://github.com/dlustre/TicTacTwo",
-        "image": "/tictactoe.gif",
+        "image": "/react-portfolio/tictactoe.gif",
         "tags": [
           "Javascript",
           "HTML",
@@ -57,7 +58,7 @@
         "description": "Machine Learning pipeline designed to augment NASA’s BPS Microscopy Dataset with synthetic radiation images. The model uses a Generative Adversarial Network (GAN) to generate synthetic images that mimic irradiated cells.",
         "url": "",
         "github": "https://github.com/UC-Irvine-CS175/final-project-shenanigans",
-        "image": "/poster.svg",
+        "image": "/react-portfolio/poster.svg",
         "tags": [
           "Python",
           "PyTorch Lightning",
