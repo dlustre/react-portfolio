@@ -28,6 +28,18 @@
     "title": "Projects",
     "projects": [
       {
+        "title": "NASA Radiation Microscopy Generative Model",
+        "description": "Machine Learning pipeline designed to augment NASA’s BPS Microscopy Dataset on AWS with synthetic radiation images and further research on the effects of cosmic radiation on astronauts.",
+        "url": "",
+        "github": "https://github.com/UC-Irvine-CS175/final-project-shenanigans",
+        "image": "/react-portfolio/poster.svg",
+        "tags": [
+          "Python",
+          "PyTorch Lightning",
+          "Matplotlib"
+        ]
+      },
+      {
         "title": "Aim Trainer",
         "description": "Browser game with user authentication and a real-time leaderboard.",
         "url": "https://dlustre.github.io/aimtrainerv2/",
@@ -51,18 +63,6 @@
           "Javascript",
           "HTML",
           "CSS"
-        ]
-      },
-      {
-        "title": "ShenaniGANs",
-        "description": "Machine Learning pipeline designed to augment NASA’s BPS Microscopy Dataset with synthetic radiation images. The model uses a Generative Adversarial Network (GAN) to generate synthetic images that mimic irradiated cells.",
-        "url": "",
-        "github": "https://github.com/UC-Irvine-CS175/final-project-shenanigans",
-        "image": "/react-portfolio/poster.svg",
-        "tags": [
-          "Python",
-          "PyTorch Lightning",
-          "Matplotlib"
         ]
       }
     ]
