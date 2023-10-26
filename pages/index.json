@@ -22,7 +22,7 @@
     "image": "/placeholder.png",
     "primary": "Hi! 👋 I'm a senior Computer Science major @ UC Irvine and I currently work as a Software Development Intern @ Thaddeus Resource Center. I love to take on projects with the goal of creating a great user experience. Lately, I've been honing my JavaScript and React for Web Development.",
     "secondary": "When I'm not coding, I'm usually making music on FL Studio, playing old Nintendo games from my childhood, or playing basketball with friends.",
-    "resume": "/react-portfolio/DennisLustre.pdf"
+    "resume": "/DennisLustre.pdf"
   },
   "projects": {
     "title": "Projects",
@@ -32,7 +32,7 @@
         "description": "Machine Learning pipeline designed to augment NASA’s BPS Microscopy Dataset on AWS with synthetic radiation images and further research on the effects of cosmic radiation on astronauts.",
         "url": "",
         "github": "https://github.com/UC-Irvine-CS175/final-project-shenanigans",
-        "image": "/react-portfolio/poster.svg",
+        "image": "/poster.svg",
         "tags": [
           "Python",
           "PyTorch Lightning",
@@ -44,7 +44,7 @@
         "description": "Browser game with user authentication and a real-time leaderboard.",
         "url": "https://dlustre.github.io/aimtrainerv2/",
         "github": "https://github.com/dlustre/aimtrainerv2",
-        "image": "/react-portfolio/aimTrainerDemo.gif",
+        "image": "/aimTrainerDemo.gif",
         "tags": [
           "JavaScript",
           "React",
@@ -58,7 +58,7 @@
         "description": "A Discord bot with a unique way to render images in real-time.",
         "url": "",
         "github": "https://github.com/dlustre/TicTacTwo",
-        "image": "/react-portfolio/tictactoe.gif",
+        "image": "/tictactoe.gif",
         "tags": [
           "Javascript",
           "HTML",
