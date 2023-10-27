@@ -1,5 +1,5 @@
 
-## React Portfolio
+## Portfolio
 
 [See Portfolio](https://dlustre.github.io/)
 
