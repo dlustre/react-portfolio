@@ -10,6 +10,9 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			fontFamily: {
+				shippori_antique: ['var(--font-shippori_antique)'],
+			},
 			keyframes: {
 				marquee1: {
 					"0%": { transform: "translateX(0%)" },

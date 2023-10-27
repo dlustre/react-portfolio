@@ -18,9 +18,9 @@
     "subtitle": "Software Engineer"
   },
   "about": {
-    "title": "About me",
+    "title": "About Me",
     "image": "/placeholder.png",
-    "primary": "Hi! 👋 I'm a senior Computer Science major @ UC Irvine and I currently work as a Software Development Intern @ Thaddeus Resource Center. I love to take on projects with the goal of creating a great user experience. Lately, I've been honing my JavaScript and React for Web Development.",
+    "primary": "Hi! 👋 I'm Dennis, an upcoming computer science grad at UCI actively seeking software engineering opportunities. This past summer, my passion for software engineering grew significantly as I learned to write high-quality code at my software engineering internship and completed multiple personal projects. I take pride in producing well-documented, scalable code and continuously strive to incorporate professional coding practices. I'm always eager to learn new concepts and share insights with others.",
     "secondary": "When I'm not coding, I'm usually making music on FL Studio, playing old Nintendo games from my childhood, or playing basketball with friends.",
     "resume": "/resume.pdf"
   },

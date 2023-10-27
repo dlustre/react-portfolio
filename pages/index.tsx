@@ -11,7 +11,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Dennis Lustre</title>
-        <link rel="icon" href="/react-portfolio/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
       </Head>
 

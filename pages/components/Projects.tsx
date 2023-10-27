@@ -7,7 +7,7 @@ const Projects = () => {
 
   return (
     <div id={projects.title} className="px-8 md:px-16 md:px-32 pb-16 bg-white">
-      <h1 className="pt-14 uppercase font-bold text-center text-black text-bold text-4xl">{projects.title}</h1>
+      <h1 className="pt-14 font-bold text-center text-black text-bold text-4xl">{projects.title}</h1>
       <div className="projects__menu">
         <ul>
           {projects.projects.map((item) => (
@@ -51,7 +51,7 @@ const Projects = () => {
                 </div>
               </div>
               <div className="lg:ml-12">
-                <a href={item.image}>
+                <a href={item.image} target="_blank" rel="noreferrer">
                   <Image
                     src={item.image}
                     alt="project image"
