@@ -17,7 +17,7 @@ const Hero = () => {
         <h1 className="text-6xl font-bold tracking-wide mt-4 text-black">{hero.subtitle}</h1>
         <a href="#About" className="text-2xl font-bold p-0.5 mt-6 w-44">
           <div className="bg-white">
-            <span className="flex justify-center text-center py-0.5 px-2 bg-gradient-to-r from-green-300 via-teal-500 to-violet-500 hover:shadow-xl hover:-translate-y-2 transition-all hover:animate-pulse">
+            <span className="flex justify-center rounded-sm text-center py-0.5 px-2 bg-gradient-to-r from-green-300 via-teal-500 to-violet-500 hover:shadow-xl hover:-translate-y-2 transition-all hover:animate-pulse">
               <Image width="32" height="32" src="https://img.icons8.com/sf-black-filled/64/FFFFFF/double-down.png" alt="double-down" />
               <Image width="32" height="32" src="https://img.icons8.com/sf-black-filled/64/FFFFFF/double-down.png" alt="double-down" className="absolute animate-pulse" />
             </span>

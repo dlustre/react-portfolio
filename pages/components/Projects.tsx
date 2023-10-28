@@ -19,11 +19,11 @@ const Projects = () => {
                 <p className="mt-5 mb-3 text-black">
                   {item.description}
                 </p>
-                <div className="bg-white bg-gradient-to-r from-green-500 via-teal-500 to-violet-500 bg-clip-text text-transparent mt-2 font-bold text-lg">
+                <div className="bg-white bg-gradient-to-r from-green-500 via-teal-500 to-violet-500 bg-clip-text text-transparent mt-2 font-bold text-md">
                   {item.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="inline mr-2"
+                      className="inline mr-2 whitespace-normal"
                     >
                       {tag}
                     </span>
@@ -31,8 +31,7 @@ const Projects = () => {
                 </div>
                 <div className="flex mt-4">
 
-                  {item.url && <div className="text-md text-center font-semibold p-0.5 bg-gradient-to-r from-green-500 via-teal-500 to-violet-500">
-
+                  {item.url && <div className="text-lg text-center mr-2 font-bold p-0.5 bg-gradient-to-r from-green-500 via-teal-500 to-violet-500">
                     <a href={item.url} target="_blank" rel="noreferrer">
                       <div className="bg-white">
                         <span className="block py-0.5 px-2 bg-white bg-gradient-to-r from-green-500 via-teal-500 to-violet-500 bg-clip-text text-transparent">
@@ -41,9 +40,9 @@ const Projects = () => {
                       </div>
                     </a>
                   </div>}
-                  <div className="bg-white ml-2 font-semibold">
+                  <div className="bg-white font-bold text-lg">
                     <a href={item.github} target="_blank" rel="noreferrer">
-                      <span className="block py-1 px-2 bg-white bg-gradient-to-r from-green-500 via-teal-500 to-violet-500 bg-clip-text text-transparent">
+                      <span className="block py-1 bg-white bg-gradient-to-r from-green-500 via-teal-500 to-violet-500 bg-clip-text text-transparent">
                         Source Code
                       </span>
                     </a>
