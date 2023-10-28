@@ -14,7 +14,7 @@ const Hero = () => {
           </span>
         </h1>
         {/* <div className="mt-7 h-0.5 w-96 bg-gradient-to-r from-green-500 via-teal-500 to-violet-500"></div> */}
-        <h1 className="text-6xl font-bold tracking-wide mt-4">{hero.subtitle}</h1>
+        <h1 className="text-6xl font-bold tracking-wide mt-4 text-black">{hero.subtitle}</h1>
         <a href="#About" className="text-2xl font-bold p-0.5 mt-6 w-44">
           <div className="bg-white">
             <span className="flex justify-center text-center py-0.5 px-2 bg-gradient-to-r from-green-300 via-teal-500 to-violet-500 hover:shadow-xl hover:-translate-y-2 transition-all hover:animate-pulse">

@@ -13,10 +13,10 @@ const Projects = () => {
           {projects.projects.map((item) => (
             <li key={item.title} className="flex flex-col lg:flex-row mt-12">
               <div className="lg:w-1/3">
-                <h2 className="text-2xl font-bold">
+                <h2 className="text-2xl font-bold text-black">
                   {item.title}
                 </h2>
-                <p className="mt-5 mb-3">
+                <p className="mt-5 mb-3 text-black">
                   {item.description}
                 </p>
                 <div className="bg-white bg-gradient-to-r from-green-500 via-teal-500 to-violet-500 bg-clip-text text-transparent mt-2 font-bold text-lg">

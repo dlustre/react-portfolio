@@ -12,7 +12,7 @@ const Header = () => {
           {navigation.map((item) => (
             <li className="mt-4 cursor-pointer" key={item.title}>
               <a href={`#${item.title}`}>
-                <span className="text-base font-semibold whitespace-nowrap hover:underline underline-offset-4">{item.title}</span>
+                <span className="text-base font-semibold text-black whitespace-nowrap hover:underline underline-offset-4">{item.title}</span>
               </a>
             </li>
           ))}
