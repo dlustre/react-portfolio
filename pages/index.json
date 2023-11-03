@@ -9,7 +9,7 @@
       "url": "http://www.example.com/portfolio"
     },
     {
-      "title": "Contact 📥",
+      "title": "Contact",
       "url": "http://www.example.com/contact"
     }
   ],
@@ -20,7 +20,7 @@
   "about": {
     "title": "About Me",
     "image": "/placeholder.png",
-    "primary": "Hi! 👋 I'm Dennis, an upcoming computer science grad at UCI actively seeking software engineering opportunities. This past summer, my passion for software engineering grew significantly as I learned to write high-quality code at my software engineering internship and completed multiple personal projects. I take pride in producing well-documented, scalable code and continuously strive to incorporate professional coding practices. I'm always eager to learn new concepts and share insights with others.",
+    "primary": "Hi! 👋I'm Dennis, an upcoming Computer Science grad at UCI actively seeking software engineering opportunities. In my current role, I'm building real-world web and mobile applications while collaborating with a cross-functional team in an AGILE environment. I have a track record of pitching and spearheading pivotal initiatives that resulted in increased productivity, more valuable internships for the company, and reduced operational costs. I'm driven by a passion for making great strides and achieving tangible benefits in every role I undertake. Let's discuss the possibilities!",
     "secondary": "When I'm not coding, I'm usually making music on FL Studio, playing old Nintendo games from my childhood, or playing basketball with friends.",
     "resume": "/resume.pdf"
   },
@@ -66,7 +66,7 @@
     ]
   },
   "contact": {
-    "title": "Contact 📥",
+    "title": "Contact",
     "description": "This is where you can describe about your contact. The more you describe about your contact, the more chances you have!",
     "formId": "mknlbvjo"
   },
