@@ -22,7 +22,7 @@
     "image": "/placeholder.png",
     "primary": "Hi! 👋I'm Dennis, an upcoming Computer Science grad at UCI actively seeking software engineering opportunities. In my current role, I'm building real-world web and mobile applications while collaborating with a cross-functional team in an AGILE environment. I have a track record of pitching and spearheading pivotal initiatives that resulted in increased productivity, more valuable internships for the company, and reduced operational costs. I'm driven by a passion for making great strides and achieving tangible benefits in every role I undertake. Let's discuss the possibilities!",
     "secondary": "When I'm not coding, I'm usually making music on FL Studio, playing old Nintendo games from my childhood, or playing basketball with friends.",
-    "resume": "/resume.pdf"
+    "resume": "/LaTeX/resume.pdf"
   },
   "projects": {
     "title": "Projects",
