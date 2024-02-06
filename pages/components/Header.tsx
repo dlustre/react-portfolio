@@ -5,9 +5,9 @@ import config from "../index.json";
 const Header = () => {
   const navigation = config.navigation;
   return (
-    <div className="h-14 bg-gray-100 sticky top-0 shadow-md bg-opacity-50 backdrop-blur-md z-10">
+    <div className="sticky top-0 z-10 bg-gray-100 bg-opacity-50 shadow-md h-14 backdrop-blur-md">
       <div className="header__menu">
-        <ul className="flex px-8 lg:px-32 gap-x-20 content-center leading-0 h-0">
+        <ul className="flex content-center h-0 px-8 lg:px-32 gap-x-20 leading-0">
           {/* <span className="mt-5 font-semibold">{config.hero.name}</span> */}
           {navigation.map((item) => (
             <li className="mt-4 cursor-pointer" key={item.title}>

@@ -12,6 +12,7 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				shippori_antique: ['var(--font-shippori_antique)'],
+				neue_regrade: ['var(--font-neue_regrade)'],
 			},
 			keyframes: {
 				marquee1: {

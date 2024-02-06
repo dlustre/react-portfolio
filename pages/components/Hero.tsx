@@ -8,23 +8,23 @@ const Hero = () => {
   const about = config.about;
 
   return (
-    <section className="h-screen bg-white overflow-x-hidden">
-      <div className="px-8 lg:px-32 flex flex-col justify-center text-center items-center gap-4">
-        <h1 className="text-6xl mt-64 font-bold tracking-wide">
+    <section className="h-screen overflow-x-hidden bg-white">
+      <div className="flex flex-col items-center justify-center gap-4 px-8 text-center lg:px-32">
+        <h1 className="mt-64 font-extrabold tracking-wide text-9xl">
           <div className="drop-shadow-md">
-            <span className="bg-gradient-to-r from-green-500 via-teal-500 to-violet-500 bg-clip-text text-transparent hover:brightness-125 transition-all">
+            <span className="text-transparent transition-all bg-gradient-to-r from-green-500 via-teal-500 to-violet-500 bg-clip-text hover:brightness-125">
               {hero.name}
             </span>
           </div>
         </h1>
         {/* <div className="mt-7 h-0.5 w-96 bg-gradient-to-r from-green-500 via-teal-500 to-violet-500"></div> */}
-        <h1 className="text-6xl font-bold tracking-wide mt-4 text-black drop-shadow-md">{hero.subtitle}</h1>
-        <div className=" pt-8 text-4xl mb-6 space-x-10 flex justify-center items-center drop-shadow-md">
-          <a rel="noreferrer" href={footer.linkedin} target="_blank" className="gradient-text hover:brightness-125 transition-all">
+        <h1 className="mt-4 italic font-semibold tracking-wide text-black text-9xl drop-shadow-md">{hero.subtitle}</h1>
+        <div className="flex items-center justify-center pt-8 mb-6 space-x-10 text-4xl drop-shadow-md">
+          <a rel="noreferrer" href={footer.linkedin} target="_blank" className="transition-all gradient-text hover:brightness-125">
             <i className="devicon-linkedin-plain" />
           </a>
-          {/* <a rel="noreferrer" href={about.resume} target="_blank" className="gradient-text hover:brightness-125 transition-all font-bold text-2xl">Resume</a> */}
-          <a rel="noreferrer" href={footer.github} target="_blank" className="gradient-text hover:brightness-125 transition-all">
+          {/* <a rel="noreferrer" href={about.resume} target="_blank" className="text-2xl font-bold transition-all gradient-text hover:brightness-125">Resume</a> */}
+          <a rel="noreferrer" href={footer.github} target="_blank" className="transition-all gradient-text hover:brightness-125">
             <i className="devicon-github-original" />
           </a>
         </div>
