@@ -4,25 +4,25 @@ import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-export const StickyScroll = ({
-  content,
-}: {
-  content: {
-    title: string;
-    description: string;
-    cardText: string;
-  }[];
-}) => {
+export const StickyScroll = () => {
   const [activeCard, setActiveCard] = React.useState(0);
   const ref = useRef<any>(null);
   const { scrollYProgress } = useScroll({
     container: ref,
     offset: ["start start", "end start"],
   });
-  const cardLength = content.length;
+
+  const titles = [
+    "Dennis Lustre",
+    "This is what I'm up to:",
+    "Projects",
+    "Contact",
+  ];
+
+  const cardLength = titles.length;
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const cardsBreakpoints = content.map((_, index) => index / cardLength);
+    const cardsBreakpoints = titles.map((_, index) => index / cardLength);
     cardsBreakpoints.forEach((breakpoint, index) => {
       if (latest > breakpoint - 0.2 && latest <= breakpoint) {
         setActiveCard(() => index);
@@ -51,9 +51,9 @@ export const StickyScroll = ({
       ref={ref}
     >
       <div className="relative flex items-start px-4 div">
-        <div className="max-w-4xl">
-          {content.map((item, index) => (
-            <div key={item.title + index} className="h-screen pt-10 my-20">
+        <div className="max-w-4xl ml-32">
+          {titles.map((title, index) => (
+            <div key={title + index} className="h-screen pt-10 my-20">
               <motion.h2
                 initial={{
                   opacity: 0,
@@ -67,7 +67,7 @@ export const StickyScroll = ({
                 }}
                 className="font-bold text-9xl text-slate-100"
               >
-                {item.title}
+                {title}
               </motion.h2>
               {index === 0 && <motion.p
                 initial={{

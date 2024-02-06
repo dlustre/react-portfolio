@@ -1,7 +1,5 @@
+import { StickyScroll } from "@/components/sticky-scroll-reveal";
 
 export default function Home() {
-  return (
-    <main className="flex flex-col items-center justify-between min-h-screen p-24">
-    </main>
-  );
+  return <StickyScroll />;
 }
