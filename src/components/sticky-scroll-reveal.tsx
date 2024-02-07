@@ -148,14 +148,14 @@ export const StickyScroll = () => {
       <motion.div
         animate={{
           // background: linearGradients[activeCard % linearGradients.length],
-          backgroundImage: backgroundImages[activeCard % backgroundImages.length],
+          // backgroundImage: backgroundImages[activeCard % backgroundImages.length],
           // scale: scales[activeCard % scales.length],
         }}
-        className={`sticky bg-contain aspect-[8000/5360] overflow-hidden hidden min-w-80 max-[1920px]:h-[43vh] h-[80vh] lg:block w-[48vw] lg:w-[50vw] xl:w-[50vw] 2xl:w-[31vw] max-[1920]:w-[31vw] max-[1920px]:top-56 max-2xl:top-32 top-10 lg:right-14 xl:right-20 shadow-lg`}
+        className={`sticky bg-[url(/AU-FG-Texture6-8K.jpg)] bg-contain aspect-[8000/5360] overflow-hidden hidden min-w-80 max-[1920px]:h-[43vh] h-[50vh] lg:block w-[48vw] lg:w-[50vw] xl:w-[50vw] 2xl:w-[31vw] max-[1920]:w-[31vw] top-56 sm:top-28 max-[1920px]:top-56 max-2xl:top-30 lg:right-14 xl:right-20 shadow-lg`}
       >
-        <div className="relative w-full h-full">
+        <div className="relative w-full h-full @container">
           <motion.div
-            className={`${activeCard === 0 ? 'block' : 'hidden'} absolute inset-0 flex flex-col gap-1 p-4 max-[1920px]:text-[5.7rem] max-2xl:text-[5rem] max-xl:text-6xl max-lg:text-6xl max-md:text-5xl text-9xl leading-none text-slate-100`}
+            className={`${activeCard === 0 ? 'block' : 'hidden'} absolute inset-0 flex flex-col gap-1 p-4 @2xl:text-9xl @xl:text-[6.5rem] @sm:text-5xl @md:text-5xl @lg:text-5xl leading-none text-slate-100`}
             initial={{
               opacity: 0,
             }}
