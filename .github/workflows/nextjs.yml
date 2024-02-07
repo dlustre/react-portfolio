@@ -63,6 +63,9 @@ jobs:
         run: pnpm build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: .out
+          name: nextjs
 
   # Deployment job
   deploy:
