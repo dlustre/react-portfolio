@@ -193,7 +193,7 @@ export const StickyScroll = () => {
               opacity: activeCard === 2 ? 1 : 0,
             }}
           >
-            <p className="text-7xl font-bold">My <a href="google.com" className="italic font-extrabold text-black hover:text-slate-100 underline transition-all">resume</a>{` has more details`}</p>
+            <p className="text-7xl font-bold">My <a href="/LaTeX/resume.pdf" target="_blank" className="italic font-extrabold text-[rgb(5,5,5)] hover:text-slate-100 underline transition-all">resume</a>{` has more details`}</p>
           </motion.div>
           <motion.div
             className={`${activeCard === 3 ? 'block' : 'hidden'} absolute inset-0 flex flex-col gap-2 p-4 text-slate-100`}

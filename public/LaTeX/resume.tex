@@ -1,0 +1,210 @@
+%-------------------------
+% Resume in Latex
+% Author: Dennis Lustre
+% Based off of: https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+% \usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[margin=1in, top=1in, bottom=1in, headheight=0pt, headsep=0pt, footskip=4.08003pt]{geometry}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\usepackage{attachfile}
+\usepackage{setspace}
+
+\usepackage[normalem]{ulem}
+
+\hypersetup{colorlinks, urlcolor=cyan}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\setstretch{.95}\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-4.8pt}
+}
+
+\newcommand{\resumeProjectHeading}[4]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-4.8pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4.8pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemiii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\usepackage{fontawesome}
+\usepackage{caption}
+
+% Redefinition, symbol included in link:
+
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Dennis Lustre} \\ \vspace{1pt}
+    % \faPhone{ }{951-529-8406} $|$
+    \faEnvelope{ }\href{mailto:dennis.lustre@gmail.com}{\uline{dennis.lustre@gmail.com}} $|$ 
+    \faLinkedinSquare{ }\href{https://linkedin.com/in/dennis-lustre}{\uline{dennis-lustre}} $|$
+    \faGithub{ }\href{https://github.com/dlustre}{\uline{dlustre}} $|$
+    \faGlobe{ }\href{https://dennislustre.com}{\uline{dennislustre.com}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California, Irvine}{September 2020 -- June 2024}
+      {Bachelor of Science in Computer Science, Specialization in Intelligent Systems}{Irvine, CA}
+    \resumeItemListStart
+        \resumeItem{\textbf{GPA}: 3.58 (6x Dean's List)}
+        \resumeItem{\textbf{Leadership \& Involvement}: Software Sub-Team Lead for FUSION Engineering Project 23-24 $|$ ICS Student Council Projects Committee (Software Developer for ZotMeal)}
+        % \resumeItem{\textbf{Leadership \& Involvement}: Software Sub-Team Lead for FUSION Engineering Project 23-24 $|$ Mentor at Filipinx Undergraduate Scientist-Engineers In An Organized Network}
+        % \resumeItem{Selected Coursework: Data Structures, Algorithms, Web Crawling, Project in AI, Machine Learning and Data Mining, Computational Photography and Vision}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: TypeScript/JavaScript, Python, C, C++, SQL, HTML, CSS/TailwindCSS, Bash} \\
+     \textbf{Tech}{: React.js, React Native, Next.js, Node.js, Firebase, Docker, Postman, Cypress, tRPC, Zod, Expo, MySQL} \\
+     \textbf{Other}{: GitHub/GitLab, Agile (Scrum), Jira (Kanban), CI/CD (GitHub Actions), Linux CLI, Jupyter, DigitalOcean} \\
+    }}
+ \end{itemize}
+ 
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer Intern}{July 2023 -- Present}
+      {Thaddeus Resource Center}{La Verne, CA}
+      \resumeItemListStart
+        \resumeItem{\textbf{Led a website overhaul that reduced operational costs by 78\%, optimized site performance using static generation, and secured more valuable internships for the organization.} Pitched the project for CEO approval, transitioned from Webflow to \textbf{Next.js} and \textbf{Firebase}, led a team of 6 using \textbf{Agile} and \textbf{CI/CD} methodologies, and deployed as a \textbf{Docker} container to DigitalOcean}
+        \resumeItem{\textbf{Reduced total lines of code by 50\% (over 700 lines)} by engineering a unique approach for a \textbf{React Native} app, using \textbf{React} components to dynamically render and populate 25+ screens}
+        \resumeItem{\textbf{Significantly improved codebase organization and maintainability} by migrating static data to a centralized data directory, authoring comprehensive Markdown articles detailing the structure of JSON objects, and achieving \textbf{100\%} docstring coverage for the app's completed modules}
+        \resumeItem{\textbf{Pioneered the introduction of testing practices:} Took initiative by implementing a \textbf{Jest}-based testing environment and authoring clear documentation for testing procedures to foster a culture of quality assurance within the team}
+        \resumeItem{\textbf{Mentored new interns, accelerating their onboarding process} with hands-on setup assistance, comprehensive repository walkthroughs, and navigating culture and organizations}
+      \resumeItemListEnd
+
+      \resumeSubheading
+      {Computer Science Instructor}{July 2022 -- Present}
+      {Coding Minds Academy}{Irvine, CA}
+      \resumeItemListStart
+        \resumeItem{\textbf{Promoted to intermediate-level instructor in record time (7 weeks after first assessment)} because of positive client feedback and by consistently soliciting and implementing management input on teaching strategy}
+        \resumeItem{\textbf{Taught 4 different programming languages to young students} (Python, Java, JavaScript, HTML/CSS)}
+        \resumeItem{\textbf{Collaborated with management to improve scheduling website:} Identified a visual issue and provided a solution to management team}
+      \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{NASA Radiation Microscopy Generative Model} $|$ \emph{Python, PyTorch Lightning} $|$ {\href{https://github.com/UC-Irvine-CS175/final-project-shenanigans}{\uline{GitHub}}}}{June 2023}
+          {ML pipeline designed to augment NASA's BPS Microscopy Dataset on AWS with synthetic radiation images}
+          {\href{https://github.com/UC-Irvine-CS175/final-project-shenanigans}{\uline{GitHub}}}
+          \resumeItemListStart
+            \resumeItem{\textbf{Furthered research on the effects of cosmic radiation on astronauts} by developing a Generative Adversarial Network with \textbf{PyTorch Lightning} to generate synthetic images that mimic irradiated cells}
+            \resumeItem{\textbf{Classified images with 93\% accuracy on a large subset of the domain} by leveraging ResNet101}
+            \resumeItem{\textbf{Presented project results to NASA GeneLab scientists} after developing the project in \textbf{Agile} sprints}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Aim Trainer Web Game} $|$ \emph{JavaScript, React.js, Firebase, HTML, CSS} $|$ \href{https://github.com/dlustre/aimtrainerv2}{\uline{GitHub}}}{August 2023}
+          {Browser game designed to train the aiming skills of FPS game enthusiasts}
+          {\href{https://dlustre.github.io/aimtrainerv2/}{\uline{Demo}} $|$ \href{https://github.com/dlustre/aimtrainerv2}{\uline{GitHub}}}
+          \resumeItemListStart
+            \resumeItem{\textbf{Optimized load times resulting in a \textbf{66\%} improvement in First Contentful Paint (FCP) and an \textbf{81\%} improvement in Largest Contentful Paint (LCP)} by module bundling with \textbf{Vite}}
+            \resumeItem{\textbf{Implemented user authentication and cloud database} with \textbf{Firebase} Authentication and Cloud Firestore}
+            \resumeItem{\textbf{Automated the build and deployment pipeline for efficient publishing to GitHub Pages} by leveraging GitHub Actions}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Tic-Tac-Toe Discord Bot} $|$ \emph{JavaScript, Discord.js, HTML, CSS} $|$ {\href{https://github.com/dlustre/TicTacTwo}{\uline{GitHub}}}}{September 2023}
+          {Discord bot that integrates a multiplayer game into servers}
+          {\href{https://github.com/dlustre/TicTacTwo}{\uline{GitHub}}}
+          \resumeItemListStart
+            \resumeItem{\textbf{Devised and implemented a novel solution for the game interface} by using Puppeteer API for dynamic image rendering in response to user messages}
+            \resumeItem{\textbf{Conducted comprehensive code reviews with a partner} to proactively identify bugs, resulting in enhanced code quality and software reliability}
+            \resumeItem{\textbf{Implemented continuous integration and deployment} using Git version control}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-------------------------------------------
+
+\end{document}
