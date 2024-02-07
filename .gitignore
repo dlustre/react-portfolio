@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+.yarn/install-state.gz
 
 # testing
 /coverage
@@ -34,13 +35,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# peacock settings
-settings.json
-
 # LaTeX
-resume.aux
-resume.fdb_latexmk
-resume.fls
-resume.log
-resume.out
-resume.synctex.gz
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
