@@ -39,6 +39,16 @@ export const StickyScroll = () => {
     "linear-gradient(to bottom right, rgb(236, 72, 153), rgb(99, 102, 241))",
     "linear-gradient(to bottom right, rgb(6, 182, 212), rgb(16, 185, 129))",
   ];
+
+  const bgImageWidth = 8000;
+  const bgImageHeight = 5360;
+
+  const backgroundImages = [
+    "url(/AU-FG-Texture6-8K.jpg)",
+    "url(/AU-FG-Texture1-8K.jpg)",
+    "url(/AU-FG-Texture5-8K.jpg)",
+    "url(/AU-FG-Texture4-8K.jpg)",
+  ]
   // const scales = [0.5, 1];
 
   return (
@@ -46,11 +56,11 @@ export const StickyScroll = () => {
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-[57.465rem] overflow-y-auto flex justify-center relative space-x-48 rounded-md p-10"
+      className="h-screen overflow-y-auto flex justify-center relative lg:space-x-32 xl:space-x-48 rounded-md p-10"
       ref={ref}
     >
       <div className="relative flex items-start px-4 div">
-        <div className="max-w-4xl lg:ml-32">
+        <div className="max-w-4xl xl:ml-32 lg:ml-24">
           {titles.map((title, index) => (
             <div key={title + index} className="h-screen pt-10 my-20">
               <motion.h2
@@ -64,7 +74,7 @@ export const StickyScroll = () => {
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-5xl font-bold lg:text-9xl text-slate-100"
+                className="text-5xl font-bold lg:text-5xl xl:text-8xl 2xl:text-9xl text-slate-100"
               >
                 {title}
               </motion.h2>
@@ -75,27 +85,26 @@ export const StickyScroll = () => {
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="mt-10 text-3xl lg:text-4xl text-slate-300"
+                className="mt-10 text-3xl lg:text-3xl xl:text-4xl text-slate-300"
               >
                 {`Hi, I'm Dennis Lustre, a software developer with a passion for building beautiful and performant web apps that make an impact.`}
               </motion.p>}
-              {index === 1 &&
-                <motion.div initial={{
-                  opacity: 0,
+              {index === 1 && <motion.div initial={{
+                opacity: 0,
+              }}
+                animate={{
+                  opacity: activeCard === index ? 1 : 0.3,
                 }}
-                  animate={{
-                    opacity: activeCard === index ? 1 : 0.3,
-                  }}
-                  className="mt-10 text-xl lg:text-4xl text-slate-300"
-                >
-                  <motion.ul className="flex flex-col gap-4">
-                    <motion.li><span className="font-semibold">Software Engineer Intern</span> @ Thaddeus Resource Center</motion.li>
-                    <motion.li>
-                      <span className="font-semibold">Software Developer</span> for ICSSC (<a href='https://github.com/icssc/ZotMeal' target='_blank' className="font-bold text-sky-400 hover:underline">ZotMeal</a>)
-                    </motion.li>
-                    <motion.li><span className="font-semibold">Computer Science</span> @ UC Irvine</motion.li>
-                  </motion.ul>
-                </motion.div>
+                className="mt-10 text-xl lg:text-4xl text-slate-300"
+              >
+                <motion.ul className="flex flex-col gap-4">
+                  <motion.li><span className="font-semibold">Software Engineer Intern</span> @ Thaddeus Resource Center</motion.li>
+                  <motion.li>
+                    <span className="font-semibold">Software Developer</span> for ICSSC (<a href='https://github.com/icssc/ZotMeal' target='_blank' className="font-bold text-sky-400 hover:underline">ZotMeal</a>)
+                  </motion.li>
+                  <motion.li><span className="font-semibold">Computer Science</span> @ UC Irvine</motion.li>
+                </motion.ul>
+              </motion.div>
               }
               {index === 2 && <motion.div initial={{
                 opacity: 0,
@@ -136,15 +145,17 @@ export const StickyScroll = () => {
           <div className="h-40" />
         </div>
       </div>
-      <motion.div animate={{
-        background: linearGradients[activeCard % linearGradients.length],
-        // scale: scales[activeCard % scales.length],
-      }}
-        className="sticky overflow-hidden hidden min-w-72 h-[45vh] bg-white rounded-md lg:block w-[32vw] top-56 right-20 shadow-lg"
+      <motion.div
+        animate={{
+          // background: linearGradients[activeCard % linearGradients.length],
+          backgroundImage: backgroundImages[activeCard % backgroundImages.length],
+          // scale: scales[activeCard % scales.length],
+        }}
+        className={`sticky bg-contain aspect-[8000/5360] overflow-hidden hidden min-w-80 max-[1920px]:h-[43vh] h-[80vh] lg:block w-[48vw] lg:w-[50vw] xl:w-[50vw] 2xl:w-[31vw] max-[1920]:w-[31vw] max-[1920px]:top-56 max-2xl:top-32 top-10 lg:right-14 xl:right-20 shadow-lg`}
       >
         <div className="relative w-full h-full">
           <motion.div
-            className={`${activeCard === 0 ? 'block' : 'hidden'} absolute inset-0 flex flex-col gap-1 p-4 text-[5.7rem] leading-none text-slate-100`}
+            className={`${activeCard === 0 ? 'block' : 'hidden'} absolute inset-0 flex flex-col gap-1 p-4 max-[1920px]:text-[5.7rem] max-2xl:text-[5rem] max-xl:text-6xl max-lg:text-6xl max-md:text-5xl text-9xl leading-none text-slate-100`}
             initial={{
               opacity: 0,
             }}
@@ -192,7 +203,7 @@ export const StickyScroll = () => {
               opacity: activeCard === 2 ? 1 : 0,
             }}
           >
-            <p className="font-bold text-7xl">My <a href="/LaTeX/resume.pdf" target="_blank" className="italic font-extrabold text-[rgb(5,5,5)] hover:text-slate-100 underline transition-all">resume</a>{` has more details`}</p>
+            <p className="font-bold lg:text-5xl xl:text-7xl">My <a href="/LaTeX/resume.pdf" target="_blank" className="italic font-extrabold text-[rgb(5,5,5)] transition-all px-1 leading-loose bg-blue-500 hover:bg-slate-100">resume</a>{` has more details`}</p>
           </motion.div>
           <motion.div
             className={`${activeCard === 3 ? 'block' : 'hidden'} absolute inset-0 flex flex-col gap-2 p-4 text-slate-100`}
@@ -205,8 +216,8 @@ export const StickyScroll = () => {
           >
             <p className="text-4xl font-bold">Scan for my contact info</p>
             <div className="flex flex-col items-center justify-center pt-4 mx-10 rounded">
-              <div className="bg-white size-[310px] flex justify-center items-center rounded-lg drop-shadow-xl">
-                <img src='https://www.dennislustre.com/qr.jpg' alt="qr" width={300} height={300} />
+              <div className="bg-white w-[65%] h-auto flex justify-center items-center rounded-lg drop-shadow-xl">
+                <img src='https://www.dennislustre.com/qr.jpg' alt="qr" className="size-[95%]" />
               </div>
             </div>
           </motion.div>
