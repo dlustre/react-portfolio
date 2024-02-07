@@ -3,7 +3,6 @@ import React, { useRef } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { generatePath } from "@/utils/generatePath";
 
 export const StickyScroll = () => {
   const [activeCard, setActiveCard] = React.useState(0);
@@ -208,7 +207,7 @@ export const StickyScroll = () => {
             <p className="text-4xl font-bold">Scan for my contact info</p>
             <div className="flex flex-col items-center justify-center pt-4 mx-10 rounded">
               <div className="bg-white size-[310px] flex justify-center items-center rounded-lg drop-shadow-xl">
-                <Image src={generatePath('/qr.jpg')} alt="qr" width={300} height={300} />
+                <Image src='https://www.dennislustre.com/qr.jpg' alt="qr" width={300} height={300} />
               </div>
             </div>
           </motion.div>
