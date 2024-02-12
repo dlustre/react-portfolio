@@ -17,18 +17,6 @@ export const StickyScroll = () => {
     "Projects",
     "Contact",
   ];
-
-  const cardLength = titles.length;
-
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const cardsBreakpoints = titles.map((_, index) => index / cardLength);
-    cardsBreakpoints.forEach((breakpoint, index) => {
-      if (latest > breakpoint - 0.2 && latest <= breakpoint) {
-        setActiveCard(() => index);
-      }
-    });
-  });
-
   const backgroundColors = [
     "rgb(23, 23, 23)",
     "rgb(5, 5, 5)",
@@ -50,6 +38,17 @@ export const StickyScroll = () => {
     "url(/AU-FG-Texture4-8K.jpg)",
   ]
   // const scales = [0.5, 1];
+
+  const cardLength = titles.length;
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    const cardsBreakpoints = titles.map((_, index) => index / cardLength);
+    cardsBreakpoints.forEach((breakpoint, index) => {
+      if (latest > breakpoint - 0.2 && latest <= breakpoint) {
+        setActiveCard(() => index);
+      }
+    });
+  });
 
   return (
     <motion.div
