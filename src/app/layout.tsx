@@ -7,9 +7,14 @@ const neue = localFont({
   variable: '--neue'
 });
 
+const heming = localFont({
+  src: '../fonts/Heming Variable.ttf',
+  variable: '--heming'
+});
+
 export const metadata: Metadata = {
-  title: "Dennis Lustre",
-  description: "Dennis Lustre | Software Developer",
+  title: "DENNIS LUSTRE",
+  description: "I BUILD SOFTWARE THAT HELPS PEOPLE.",
 };
 
 export default function RootLayout({
