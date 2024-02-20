@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { AnimatePresence, Transition, Variants, useMotionValueEvent, useScroll } from "framer-motion";
+import { Transition, Variants, useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 
 export const Portfolio = () => {
@@ -156,12 +156,14 @@ export const Portfolio = () => {
     <>
       <motion.div
         initial={{
-          perspective: 1000,
-          rotateX: 90,
+          opacity: 0,
+          // perspective: 1000,
+          // rotateX: 90,
         }}
         animate={{
-          perspective: 0,
-          rotateX: 0,
+          opacity: 1,
+          // perspective: 0,
+          // rotateX: 0,
         }}
         transition={{
           duration: 1,
