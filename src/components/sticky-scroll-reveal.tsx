@@ -1,18 +1,30 @@
 "use client";
-import React, { useRef } from "react";
+import React from "react";
 import { Transition, Variants, useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 
 export const StickyScroll = () => {
   const [activeCard, setActiveCard] = React.useState(0);
+  const [imageLoaded, setImageLoaded] = React.useState(false);
+  const [animationEnd, setAnimationEnd] = React.useState(false);
+  const bgImageUrl = "/AU-FG-Texture6-8K.jpg";
+
+  React.useEffect(() => {
+    const img = new Image();
+    img.src = bgImageUrl;
+    img.onload = () => setImageLoaded(true);
+  }, [bgImageUrl]);
 
   const transition: Transition = {
-    type: 'spring',
-    stiffness: 100,
-    damping: 30,
-    mass: 0.5,
+    y: {
+      type: 'spring',
+      stiffness: 100,
+      damping: 30,
+      mass: 0.5,
+    }
     // staggerChildren: 0.5,
   };
+
 
   const containerVariants: Variants = {
     hidden: {
@@ -51,7 +63,7 @@ export const StickyScroll = () => {
   };
 
 
-  // const ref = useRef<any>(null);
+  // const ref = React.useRef<any>(null);
   // const { scrollYProgress } = useScroll({
   //   container: ref,
   //   offset: ["start start", "end start"],
@@ -107,6 +119,31 @@ export const StickyScroll = () => {
     }
   }
 
+  if (!imageLoaded || !animationEnd) {
+    return (
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 1,
+          delay: 0.5,
+          // repeat: 1,
+          // repeatType: "reverse",
+
+        }}
+        onAnimationComplete={() => setAnimationEnd(true)}
+        className="h-screen w-screen flex items-center justify-center dark:text-slate-100 text-neutral-900 font-bold text-[2vw] overflow-hidden bg-none"
+        id="loading"
+      >
+        LOADING
+      </motion.div>
+    );
+  }
+
   return (
     <motion.div
       onWheel={handleScroll}
@@ -116,6 +153,16 @@ export const StickyScroll = () => {
     >
       <motion.div
         className={`absolute left-0 h-screen flex flex-col items-center justify-center gap-20 w-[14vw] z-10 hover:backdrop-blur backdrop-brightness-50 hover:opacity-100 transition-all duration-300 ease-linear`}
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+          transition: {
+            duration: 1,
+            delay: 0.5,
+          }
+        }}
       >
         {sectionTitles.map((title, index) => (
           <motion.div
@@ -143,10 +190,20 @@ export const StickyScroll = () => {
         ))}
       </motion.div>
       <motion.div
-        className={`bg-[url(/AU-FG-Texture6-8K.jpg)] bg-contain min-w-80 h-screen w-screen shadow-lg overflow-hidden overscroll-none`}
+        className={`bg-[url(/AU-FG-Texture6-8K.jpg)] bg-contain h-screen w-screen overflow-hidden overscroll-none`}
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+          transition: {
+            duration: 1,
+            delay: 0.5,
+          }
+        }}
       >
         <motion.div
-          className={`flex flex-col items-center justify-center w-screen h-screen text-[9rem] text-slate-100`}
+          className={`flex flex-col items-center justify-center w-screen h-screen text-slate-100`}
           initial={{
             opacity: 0,
           }}
@@ -161,7 +218,7 @@ export const StickyScroll = () => {
           <motion.p className="font-extrabold text-[1vw] w-1/2 text-slate-300 mt-10 underline underline-offset-4 decoration-2">{`I BUILD SOFTWARE THAT HELPS PEOPLE.`}</motion.p>
         </motion.div>
         <motion.div
-          className={`flex flex-col items-center justify-center w-screen h-screen text-[9rem] text-slate-100`}
+          className={`flex flex-col items-center justify-center w-screen h-screen text-slate-100`}
           initial={{
             opacity: 0,
           }}
@@ -230,7 +287,7 @@ export const StickyScroll = () => {
           </motion.div>
         </motion.div>
         <motion.div
-          className={`flex flex-col items-center justify-center gap-4 w-screen h-screen text-[9rem] text-slate-100`}
+          className={`flex flex-col items-center justify-center gap-4 w-screen h-screen text-slate-100`}
           initial={{
             opacity: 0,
           }}
