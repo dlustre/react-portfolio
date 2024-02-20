@@ -21,6 +21,7 @@ export const Portfolio = () => {
       stiffness: 100,
       damping: 30,
       mass: 0.5,
+      restDelta: 0.001,
     }
     // staggerChildren: 0.5,
   };
@@ -154,27 +155,22 @@ export const Portfolio = () => {
   const Loading = () => (
     <>
       <motion.div
-        key={"loading"}
         initial={{
-          opacity: 0,
           perspective: 1000,
           rotateX: 90,
         }}
         animate={{
-          opacity: 1,
           perspective: 0,
           rotateX: 0,
         }}
-        exit={{
-          opacity: 0
-        }}
         transition={{
           duration: 1,
+          ease: [0.17, 0.67, 0.83, 0.67],
         }}
         onAnimationComplete={() => setAnimationEnd(true)}
-        className={`h-screen w-screen flex items-center justify-center dark:text-slate-100 text-neutral-900 font-bold text-[2vw] overflow-hidden bg-none z-20`}
+        className={`h-screen w-screen flex items-center justify-center dark:text-slate-100 text-neutral-900 font-bold text-[2vw] overflow-hidden bg-none z-20 select-none`}
       >
-        LOADING
+        HELLO
       </motion.div>
     </>
   )
@@ -197,6 +193,7 @@ export const Portfolio = () => {
           opacity: 1,
           transition: {
             duration: 1,
+            ease: [0.17, 0.67, 0.83, 0.67],
             delay: 0.5,
           }
         }}
