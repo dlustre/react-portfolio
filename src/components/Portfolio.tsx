@@ -3,6 +3,34 @@ import React from "react";
 import { Transition, Variants, useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 
+function WorkItem({ title, date, company }: { title: string, date: string, company: React.JSX.Element }) {
+  return <motion.li>
+    <div className="flex justify-between">
+      <p className="font-bold">{title}</p>
+      <p className="font-semibold text-slate-300 text-[1.2vw]">{date}</p>
+    </div>
+    <p className="text-slate-400 italic text-[1.3vw]">{company}</p>
+  </motion.li>;
+}
+
+const workItems = [
+  {
+    title: "SOFTWARE DEVELOPER",
+    date: "NOV 2023",
+    company: <>ICSSC (<a href='https://github.com/icssc/ZotMeal' target='_blank' className="font-bold text-sky-400 hover:underline">ZOTMEAL</a>)</>,
+  },
+  {
+    title: "SOFTWARE ENGINEER INTERN",
+    date: "JULY 2023",
+    company: <>THADDEUS RESOURCE CENTER</>,
+  },
+  {
+    title: "COMPUTER SCIENCE",
+    date: "SEP 2020",
+    company: <>UNIVERSITY OF CALIFORNIA, IRVINE</>,
+  },
+];
+
 export const Portfolio = () => {
   const [activeCard, setActiveCard] = React.useState(0);
   const [imageLoaded, setImageLoaded] = React.useState(false);
@@ -26,45 +54,46 @@ export const Portfolio = () => {
     // staggerChildren: 0.5,
   };
 
-  // const wordVariants: Variants = {
-  //   animate: {
-  //     transition: {
-  //       delayChildren: 5,
-  //       staggerChildren: 0.1,
-  //     },
-  //   },
-  // };
+  const wordVariants: Variants = {
+    animate: {
+      transition: {
+        delayChildren: 0.4,
+        staggerChildren: 0.1,
+      },
+    },
+  };
 
-  // const letterVariants: Variants = {
-  //   initial: { y: 400 },
-  //   animate: {
-  //     y: 0,
-  //     transition: {
-  //       delay: 5,
-  //       ease: [0.6, 0.01, -0.05, 0.95],
-  //       duration: 5,
-  //       repeat: Infinity,
-  //     },
-  //   },
-  // };
+  const letterVariants: Variants = {
+    initial: { opacity: 0, marginTop: 400 },
+    animate: {
+      opacity: 1,
+      marginTop: 0,
+      transition: {
+        ease: [0.6, 0.01, -0.05, 0.95],
+        duration: 1,
+        opacity: { duration: 0.5 },
+      },
+    },
+  };
 
-  // const AnimatedLetters = ({ title }: { title: string }) => (
-  //   <motion.span
-  //     variants={wordVariants}
-  //     initial='initial'
-  //     whileInView='animate'
-  //     viewport={{ once: true }}
-  //   >
-  //     {title.split('').map((letter, index) => (
-  //       <motion.span
-  //         key={index}
-  //         variants={letterVariants}
-  //       >
-  //         {letter}
-  //       </motion.span>
-  //     ))}
-  //   </motion.span>
-  // );
+  const AnimatedLetters = ({ title }: { title: string }) => (
+    <motion.div
+      variants={wordVariants}
+      initial='initial'
+      whileInView='animate'
+      className="flex"
+      viewport={{ once: true }}
+    >
+      {title.split('').map((letter, index) => (
+        <motion.div
+          key={index}
+          variants={letterVariants}
+        >
+          {letter}
+        </motion.div>
+      ))}
+    </motion.div>
+  );
 
   const containerVariants: Variants = {
     hidden: {
@@ -101,7 +130,6 @@ export const Portfolio = () => {
       }
     },
   };
-
 
   // const ref = React.useRef<any>(null);
   // const { scrollYProgress } = useScroll({
@@ -153,29 +181,36 @@ export const Portfolio = () => {
   }
 
   const Loading = () => (
-    <>
+    <motion.div
+      variants={wordVariants}
+      initial='initial'
+      whileInView='animate'
+      className="h-screen w-screen flex items-center justify-center"
+    >
       <motion.div
-        initial={{
-          opacity: 0,
-          // perspective: 1000,
-          // rotateX: 90,
-        }}
-        animate={{
-          opacity: 1,
-          // perspective: 0,
-          // rotateX: 0,
-        }}
-        transition={{
-          duration: 1,
-          ease: [0.17, 0.67, 0.83, 0.67],
-        }}
-        onAnimationComplete={() => setAnimationEnd(true)}
-        className={`h-screen w-screen flex items-center justify-center dark:text-slate-100 text-neutral-900 font-bold text-[2vw] overflow-hidden bg-none z-20 select-none`}
+        className="overflow-hidden border select-none flex items-center justify-center p-8"
       >
-        HELLO
+        {"dlustre".split('').map((letter, index) => (
+          <motion.div
+            key={index}
+            variants={letterVariants}
+            className={`dark:text-slate-100 text-neutral-900 font-bold text-[2vw] overflow-hidden p-8`}
+            onAnimationComplete={() =>
+              setTimeout(() => setAnimationEnd(true), 1000)
+            }
+          >
+            {letter}
+          </motion.div>
+        ))}
       </motion.div>
-    </>
+    </motion.div>
   )
+
+  // return (
+  //   <motion.div className="font-extrabold text-[7vw]">
+  //     <AnimatedLetters title="DENNIS LUSTRE" />
+  //   </motion.div>
+  // )
 
   if (!imageLoaded || !animationEnd) return <Loading />;
 
@@ -269,27 +304,9 @@ export const Portfolio = () => {
             my <a href="/LaTeX/resume.pdf" target="_blank" className="italic font-extrabold text-[rgb(5,5,5)] transition-all px-1 leading-loose bg-blue-500 hover:bg-slate-100">resume</a>{` has more details`}
           </p>
           <motion.ul className="flex flex-col gap-10 text-[1.5vw] w-1/2 pr-[15vw] mb-10">
-            <motion.li>
-              <div className="flex justify-between">
-                <p className="font-bold">SOFTWARE DEVELOPER</p>
-                <p className="font-semibold text-slate-300 text-[1.2vw]">NOV 2023</p>
-              </div>
-              <p className="text-slate-400 italic text-[1.3vw]">ICSSC (<a href='https://github.com/icssc/ZotMeal' target='_blank' className="font-bold text-sky-400 hover:underline">ZOTMEAL</a>)</p>
-            </motion.li>
-            <motion.li>
-              <div className="flex justify-between items-center">
-                <p className="font-bold">SOFTWARE ENGINEER INTERN</p>
-                <p className="font-semibold text-slate-300 text-[1.2vw]">JULY 2023</p>
-              </div>
-              <p className="text-slate-400 italic text-[1.3vw]">THADDEUS RESOURCE CENTER</p>
-            </motion.li>
-            <motion.li>
-              <div className="flex justify-between items-center">
-                <p className="font-bold">COMPUTER SCIENCE</p>
-                <p className="font-semibold text-slate-300 text-[1.2vw]">SEP 2020</p>
-              </div>
-              <p className="text-slate-400 italic text-[1.3vw]">UNIVERSITY OF CALIFORNIA, IRVINE</p>
-            </motion.li>
+            {workItems.map((item, index) => (
+              <WorkItem key={index} {...item} />
+            ))}
           </motion.ul>
           <p className="font-extrabold text-[2vw] w-1/2 mb-4">THIS IS WHAT I USE</p>
           <motion.div
