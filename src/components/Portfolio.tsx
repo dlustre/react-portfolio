@@ -3,7 +3,7 @@ import React from "react";
 import { AnimatePresence, Transition, Variants, useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 
-export const StickyScroll = () => {
+export const Portfolio = () => {
   const [activeCard, setActiveCard] = React.useState(0);
   const [imageLoaded, setImageLoaded] = React.useState(false);
   const [animationEnd, setAnimationEnd] = React.useState(false);
@@ -111,13 +111,6 @@ export const StickyScroll = () => {
   // const bgImageWidth = 8000;
   // const bgImageHeight = 5360;
 
-  // const backgroundImages = [
-  //   "url(/AU-FG-Texture6-8K.jpg)",
-  //   "url(/AU-FG-Texture1-8K.jpg)",
-  //   "url(/AU-FG-Texture5-8K.jpg)",
-  //   "url(/AU-FG-Texture4-8K.jpg)",
-  // ]
-
   // const cardLength = titles.length;
 
   // useMotionValueEvent(scrollYProgress, "change", (latest) => {
@@ -158,37 +151,35 @@ export const StickyScroll = () => {
     }
   }
 
-  const Loading = ({ isVisible }: { isVisible: boolean }) => (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.div
-          key={"loading"}
-          initial={{
-            opacity: 0,
-            perspective: 1000,
-            rotateX: 90,
-          }}
-          animate={{
-            opacity: 1,
-            perspective: 0,
-            rotateX: 0,
-          }}
-          exit={{
-            opacity: 0
-          }}
-          transition={{
-            duration: 1,
-          }}
-          onAnimationComplete={() => setAnimationEnd(true)}
-          className={`h-screen w-screen flex items-center justify-center dark:text-slate-100 text-neutral-900 font-bold text-[2vw] overflow-hidden bg-none z-20`}
-        >
-          LOADING
-        </motion.div>
-      )}
-    </AnimatePresence>
+  const Loading = () => (
+    <>
+      <motion.div
+        key={"loading"}
+        initial={{
+          opacity: 0,
+          perspective: 1000,
+          rotateX: 90,
+        }}
+        animate={{
+          opacity: 1,
+          perspective: 0,
+          rotateX: 0,
+        }}
+        exit={{
+          opacity: 0
+        }}
+        transition={{
+          duration: 1,
+        }}
+        onAnimationComplete={() => setAnimationEnd(true)}
+        className={`h-screen w-screen flex items-center justify-center dark:text-slate-100 text-neutral-900 font-bold text-[2vw] overflow-hidden bg-none z-20`}
+      >
+        LOADING
+      </motion.div>
+    </>
   )
 
-  if (!imageLoaded || !animationEnd) return <Loading isVisible={!imageLoaded || !animationEnd} />;
+  if (!imageLoaded || !animationEnd) return <Loading />;
 
   return (
     <motion.div

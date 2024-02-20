@@ -1,3 +1,3 @@
-import { StickyScroll } from "@/components/sticky-scroll-reveal";
+import { Portfolio } from "@/components/Portfolio";
 
-export default function Home() { return <StickyScroll /> }
+export default function Home() { return <Portfolio /> }
