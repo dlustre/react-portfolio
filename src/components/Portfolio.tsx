@@ -160,9 +160,9 @@ export const Portfolio = () => {
   const [startY, setStartY] = React.useState(0);
 
   function handleScroll(e: React.WheelEvent) {
-    if (e.deltaY > 0 && activeCard < sectionTitles.length - 1) {
-      setActiveCard(prevCard => prevCard + 1);
-    } else if (e.deltaY < 0) {
+    if ((e.deltaY === 100 || e.deltaY > 100) && activeCard < sectionTitles.length - 1) {
+      setActiveCard(prevCard => Math.min(prevCard + 1, 2));
+    } else if (e.deltaY === -100 || e.deltaY < -100) {
       setActiveCard(prevCard => prevCard > 0 ? prevCard - 1 : 0);
     }
   }
