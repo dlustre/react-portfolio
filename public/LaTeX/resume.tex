@@ -26,7 +26,7 @@
 
 \usepackage[normalem]{ulem}
 
-\hypersetup{colorlinks, urlcolor=cyan}
+% \hypersetup{colorlinks, urlcolor=cyan}
 
 %----------FONT OPTIONS----------
 % sans-serif
@@ -110,10 +110,14 @@
 \begin{center}
     \textbf{\Huge \scshape Dennis Lustre} \\ \vspace{1pt}
     % \faPhone{ }{951-529-8406} $|$
-    \faLinkedinSquare{ }\href{https://linkedin.com/in/dlustre}{\uline{dlustre}} $|$
-    \faGithub{ }\href{https://github.com/dlustre}{\uline{dlustre}} $|$
-    \href{https://dennislustre.com}{\uline{dennislustre.com}} $|$ 
-    \href{mailto:dennis.lustre@gmail.com}{\uline{dennis.lustre@gmail.com}} 
+    \href{mailto:dennis.lustre@gmail.com}{dennis.lustre@gmail.com} $|$
+    \href{https://github.com/dlustre}{github.com/dlustre} $|$
+    \href{https://linkedin.com/in/dlustre}{linkedin.com/in/dlustre} $|$
+    \href{https://dennislustre.com}{dennislustre.com}
+    % \faLinkedinSquare{ }\href{https://linkedin.com/in/dlustre}{\uline{linkedin.com/in/dlustre}} $|$
+    % \faGithub{ }\href{https://github.com/dlustre}{\uline{github.com/dlustre}} $|$
+    % \href{https://dennislustre.com}{\uline{dennislustre.com}} $|$ 
+    % \href{mailto:dennis.lustre@gmail.com}{\uline{dennis.lustre@gmail.com}} 
 \end{center}
 
 \section{Education}
@@ -125,7 +129,7 @@
     \resumeItemListStart
         \resumeItem{\textbf{GPA}: 3.63/4.0 (8x Dean's List)}
         \resumeItem{\textbf{Leadership \& Involvement}:  ICS Student Council Projects Committee $|$ Mentor for FUSION}
-        \resumeItem{\textbf{Courses}: Computer Vision, Machine Learning, Artificial Intelligence, Data Structures \& Algorithms, System Design}
+        \resumeItem{\textbf{Courses}: Computer Vision, Artificial Intelligence, System Design, Data Structures \& Algorithms}
         % \resumeItem{\textbf{Leadership \& Involvement}: Software Sub-Team Lead for FUSION Engineering Project 23-24 $|$ Mentor at Filipinx Undergraduate Scientist-Engineers In An Organized Network}
         % \resumeItem{Selected Coursework: Data Structures, Algorithms, Web Crawling, Project in AI, Machine Learning and Data Mining, Computational Photography and Vision}
     \resumeItemListEnd
@@ -136,13 +140,21 @@
   \resumeSubHeadingListStart
   
   \resumeSubheading
+  {Machine Learning Engineer}{May 2024 - Present}
+  {Boundary Remote Sensing Systems}{Remote}
+  \resumeItemListStart
+    \resumeItem{\textbf{Leading development of an ML pipeline} to generate reports with data visualizations tailored to geospatial data, utilizing \textbf{CUDA} and \textbf{HuggingFace Transformers} for inference}
+    \resumeItem{\textbf{Improved Microsoft LIDA's optimization capabilities} by making an open source contribution enabling 4-bit quantization for LLMs running locally}
+  \resumeItemListEnd
+
+  \resumeSubheading
   {Software Developer}{November 2023 - Present}
-  {ICS Student Council - \href{https://github.com/icssc/ZotMeal}{\uline{ZotMeal}}}{Irvine, CA}
+  {ICS Student Council - \href{https://github.com/icssc/ZotMeal}{ZotMeal}}{Irvine, CA}
   \resumeItemListStart
     \resumeItem{\textbf{Led front-end development} by designing \textbf{Figma} mockups, creating Android, iOS, and web compatible \textbf{React Native} components, and integrating with the back-end using \textbf{tRPC}}
-    \resumeItem{\textbf{Sped up daily and weekly back-end services by 50\%} by parallelizing async operations for all \textbf{AWS Lambda} functions}
+    \resumeItem{\textbf{Sped up back-end cron services by 50\%} by parallelizing async operations for \textbf{AWS Lambda} serverless functions}
     \resumeItem{\textbf{Slashed setup and teardown times for PostgreSQL integration tests by 30\%} by adopting \textbf{Testcontainers} to simplify database test suites in \textbf{Vitest}}
-    \resumeItem{\textbf{Built an events listing feature end-to-end} by utilizing \textbf{Cheerio} and \textbf{Axios} to scrape dining hall event data and display it on the app}
+    % \resumeItem{\textbf{Built an events listing feature end-to-end} by utilizing \textbf{Cheerio} and \textbf{Axios} to scrape dining hall event data and display it on the app}
   \resumeItemListEnd
 
   \resumeSubheading
@@ -151,17 +163,17 @@
   \resumeItemListStart
     \resumeItem{\textbf{Led the development of embedded systems software within a cross-functional team of 11 engineers} for a gesture-controlled robotic arm using \textbf{Arduino} microcontrollers}
     \resumeItem{\textbf{Achieved 1st place and won 2 additional awards at FUSIONCon:} \textbf{Sponsor's Choice} and \textbf{Most Innovative Design}}
-    \resumeItem{\textbf{Mentored 2 software developers, accelerating their onboarding process} by organizing workshops, code reviews, and coding sessions, fostering a culture of learning and collaboration}
+    % \resumeItem{\textbf{Mentored 2 software developers, accelerating their onboarding process} by organizing workshops, code reviews, and coding sessions, fostering a culture of learning and collaboration}
     % \resumeItem{\textbf{Designed a robust serial communication protocol over Bluetooth} between two \textbf{Arduino} microcontrollers, enabling robot arm movements using flex sensors and servo motors}
   \resumeItemListEnd
   
   \resumeSubheading
     {Software Engineer Intern}{July 2023 - July 2024}
-    {Thaddeus Resource Center}{La Verne, CA}
+    {Thaddeus Resource Center}{Remote}
     \resumeItemListStart
       \resumeItem{\textbf{Led a website overhaul that reduced operational costs by 78\%, optimized site performance using static generation, and secured more valuable internships for the organization:} Pitched the project for CEO approval, transitioned from Webflow to \textbf{Next.js} and \textbf{Firebase}, led a team of 6 using \textbf{Agile} and \textbf{CI/CD} methodologies, and deployed as a \textbf{Docker} container to DigitalOcean}
-      \resumeItem{\textbf{Saved an estimated 3 hours of CI and developer time per week} by creating a streamlined \textbf{CI/CD} pipeline with \textbf{GitHub Actions}, \textbf{PNPM}, and \textbf{Docker}} \
-      \resumeItem{\textbf{Accelerated CI execution times by 50\%} through parallelizing \textbf{Jest} and \textbf{Playwright} test suites and caching dependencies}
+      \resumeItem{\textbf{Saved an estimated 3 hours of CI and developer time per week} by building a \textbf{CI/CD} pipeline with \textbf{GitHub Actions}, \textbf{PNPM}, and \textbf{Docker}} \
+      \resumeItem{\textbf{Accelerated CI execution times by 50\%} by parallelizing and caching \textbf{Jest} and \textbf{Playwright} E2E test suites}
       % \resumeItem{\textbf{Significantly improved code maintainability} by converting codebase from \textbf{JavaScript} to \textbf{TypeScript}, integrating \textbf{Zod} to ensure robust type safety, and achieving \textbf{100\%} adoption rate by leading a workshop for the development team}
       % \resumeItem{\textbf{Reduced total lines of code by 50\% (over 700 lines)} by engineering an efficient approach for a \textbf{React Native} app, using \textbf{React} components to dynamically render and populate 25+ screens}
       % \resumeItem{\textbf{Pioneered the introduction of testing practices:} Took initiative by implementing a \textbf{Jest}-based testing environment and authoring clear documentation for testing procedures to foster a culture of quality assurance within the team}
@@ -178,9 +190,9 @@
       {Wordle-inspired game that challenges players to guess the Orange County city based on geospatial clues}
       {\href{https://geodle-seven.vercel.app/}{\uline{Demo}} $|$ \href{https://github.com/dlustre/geodle}{\uline{GitHub}}}
       \resumeItemListStart
-        \resumeItem{\textbf{Won 2 awards at Data@UCI's Atlantis Datathon:} \textbf{People's Choice} and \textbf{Best Use of Melissa API or Data Sets}}
+        \resumeItem{\textbf{Won 2 awards at Data@UCI's Atlantis Datathon:} \textbf{People's Choice} and \textbf{Best Use of Melissa API}}
         \resumeItem{\textbf{Developed a full-stack browser game in 24 hours} that utilizes a reverse geocoder API to generate geospatial clues for players to guess Orange County cities}
-        \resumeItem{\textbf{Built a custom geospatial dataset} by cleaning and processing data with \textbf{pandas} to derive clues for 34 cities}
+        % \resumeItem{\textbf{Built a custom geospatial dataset} by cleaning and processing data with \textbf{pandas} to derive clues for 34 cities}
       \resumeItemListEnd
 
     \resumeProjectHeading
@@ -199,8 +211,8 @@
   \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
     \textbf{Programming Languages}{: JavaScript, Golang, Rust, C, C++, C\#, Java, SQL, HTML, CSS} \\
-    \textbf{Tech}{: React.js, Node.js, ORM, MySQL, Postman, Cypress, AWS, Azure, Vercel, NoSQL, CUDA, NumPy} \\
-    \textbf{Other}{: GitLab, Scrum, Jira (Kanban), Linux, Jupyter, Bash, Powershell, Shell Scripting, HTTP, TCP, SDLC} \\
+    \textbf{Tech}{: React.js, Node.js, MySQL, Postman, Cypress, AWS, Azure, Vercel, NoSQL, CUDA, NumPy, pandas} \\
+    \textbf{Other}{: Google Colab, GitLab, Scrum, Jira (Kanban), Linux, Jupyter, Bash Shell Scripting, Powershell, HTTP, TCP, SDLC, ORM} \\
     }}
   \end{itemize}
 
