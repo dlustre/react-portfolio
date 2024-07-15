@@ -3,21 +3,23 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 const neue = localFont({
-	src: "../fonts/Neue-Regrade-Variable.ttf",
-	variable: "--neue",
+  src: "../fonts/Neue-Regrade-Variable.ttf",
+  variable: "--neue",
 });
 
 export const metadata: Metadata = {
-	title: "DENNIS LUSTRE",
-	description: "I BUILD SOFTWARE THAT HELPS PEOPLE.",
+  title: "DENNIS LUSTRE",
+  description: "I BUILD SOFTWARE THAT HELPS PEOPLE.",
 };
 
-export default ({
-	children,
+export default function RootLayout({
+  children,
 }: Readonly<{
-	children: React.ReactNode;
-}>) => (
-	<html lang="en">
-		<body className={`${neue.className}`}>{children}</body>
-	</html>
-);
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={`${neue.className}`}>{children}</body>
+    </html>
+  );
+}
