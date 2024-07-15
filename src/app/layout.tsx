@@ -3,13 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 const neue = localFont({
-  src: '../fonts/Neue-Regrade-Variable.ttf',
-  variable: '--neue'
-});
-
-const heming = localFont({
-  src: '../fonts/Heming Variable.ttf',
-  variable: '--heming'
+  src: "../fonts/Neue-Regrade-Variable.ttf",
+  variable: "--neue",
 });
 
 export const metadata: Metadata = {
@@ -17,14 +12,12 @@ export const metadata: Metadata = {
   description: "I BUILD SOFTWARE THAT HELPS PEOPLE.",
 };
 
-export default function RootLayout({
+export default ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body className={`${neue.className}`}>{children}</body>
-    </html>
-  );
-}
+}>) => (
+  <html lang="en">
+    <body className={`${neue.className}`}>{children}</body>
+  </html>
+);

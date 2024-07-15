@@ -2,7 +2,6 @@
 import React from "react";
 import { Transition, Variants } from "framer-motion";
 import { motion } from "framer-motion";
-import type { SVGProps } from "react";
 
 const WorkItem = ({
   title,
@@ -216,28 +215,32 @@ export const Portfolio = () => {
       className="overscroll-none overflow-hidden"
     >
       <motion.div
-        className={`hidden sm:flex absolute left-0 h-screen flex-col items-center justify-center gap-20 z-10 backdrop-blur-sm backdrop-brightness-50 transition-all duration-300`}
-        initial={{
-          opacity: 0,
-        }}
-        animate={{
-          opacity: 1,
-          transition: {
-            duration: 1,
-            ease: [0.17, 0.67, 0.83, 0.67],
-            delay: 0.5,
-          },
-        }}
+        className={`hidden sm:flex absolute left-0 h-screen flex-col items-center justify-center z-10 transition-all duration-300`}
       >
-        {sectionTitles.map((title, index) => (
-          <motion.button
-            key={index}
-            onClick={() => setActiveCard(index)}
-            className={`${
-              activeCard === index ? "opacity-100" : "opacity-25"
-            } text-[1.5vw] bg-neutral-100 rounded-full size-6 mx-10 text-neutral-100 transition-all duration-300 ease-in-out`}
-          />
-        ))}
+        <motion.div
+          className="flex flex-col items-center justify-center space-y-10 backdrop-blur-sm backdrop-brightness-50 mx-10 py-16 rounded-lg"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+            transition: {
+              duration: 1,
+              ease: [0.17, 0.67, 0.83, 0.67],
+              delay: 0.5,
+            },
+          }}
+        >
+          {sectionTitles.map((_, index) => (
+            <motion.button
+              key={index}
+              onClick={() => setActiveCard(index)}
+              className={`${
+                activeCard === index ? "opacity-100" : "opacity-25"
+              } text-[1.5vw] bg-neutral-100 rounded-full size-6 mx-6 text-neutral-100 transition-all duration-300 ease-in-out`}
+            />
+          ))}
+        </motion.div>
       </motion.div>
       <motion.div
         className={`bg-[url(/AU-FG-Texture6-8K.jpg)] bg-contain h-screen w-screen overflow-hidden overscroll-none`}
