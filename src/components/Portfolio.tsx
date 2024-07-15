@@ -14,12 +14,12 @@ const WorkItem = ({
 }) => (
 	<>
 		<tr>
-			<td className="font-bold">{title}</td>
-			<td className="font-semibold mt-3 text-neutral-300 text-base sm:text-[1.2vw]">
+			<td className="font-bold max-sm:text-xs">{title}</td>
+			<td className="font-semibold mt-3 text-neutral-300 max-sm:text-xs xl:text-xl">
 				{date}
 			</td>
 		</tr>
-		<p className="text-neutral-400 italic text-lg sm:text-xl mt-1 mb-3">
+		<p className="text-neutral-400 italic max-sm:text-xs xl:text-xl mt-1 mb-3">
 			{company}
 		</p>
 	</>
@@ -157,15 +157,15 @@ const svgVariants: Variants = {
 	},
 };
 
+// TODO: use suspense instead of loading the image
 export const Portfolio = () => {
 	const [activeCard, setActiveCard] = React.useState(0);
 	const [imageLoaded, setImageLoaded] = React.useState(false);
 	const [animationEnd, setAnimationEnd] = React.useState(false);
-	const bgImageUrl = "/AU-FG-Texture6-8K.jpg";
 
 	React.useEffect(() => {
 		const img = new Image();
-		img.src = bgImageUrl;
+		img.src = "/AU-FG-Texture6-8K.jpg";
 		img.onload = () => setImageLoaded(true);
 	}, []);
 
@@ -298,10 +298,10 @@ export const Portfolio = () => {
 						transition,
 					}}
 				>
-					<motion.p className="font-extrabold text-5xl mb-10 text-center sm:text-8xl text-neutral-200">
+					<motion.p className="font-extrabold text-4xl mb-10 text-center sm:text-8xl text-neutral-200">
 						DENNIS LUSTRE
 					</motion.p>
-					<motion.p className="text-center font-extrabold mt-16 sm:mt-0 text-2xl sm:text-[1vw] sm:w-1/2 text-neutral-300 bg-black/30 p-4 px-4 mx-8 rounded-lg backdrop-blur-sm">{`HI, I'M DENNIS, AND I LOVE DOING ML AND FULL-STACK WEB DEV.`}</motion.p>
+					<motion.p className="text-center font-extrabold mt-16 sm:mt-0 text-xl xl:text-2xl sm:w-1/2 text-neutral-300 bg-black/30 p-4 px-4 mx-8 rounded-lg backdrop-blur-sm">{`HI, I'M DENNIS, AND I LOVE DOING ML AND FULL-STACK WEB DEV.`}</motion.p>
 					<div className="text-xl mt-10 sm:text-[1.5vw] text-center sm:text-left space-y-5 flex flex-col text-neutral-300 bg-black/30 p-4 px-8 rounded-lg backdrop-blur-sm">
 						<a
 							href="mailto:dennis.lustre@gmail.com"
@@ -334,7 +334,7 @@ export const Portfolio = () => {
 						transition,
 					}}
 				>
-					<div className="bg-black/30 py-6 px-8 rounded-lg w-5/6 sm:w-1/2 mb-8 backdrop-blur-sm">
+					<div className="bg-black/30 py-6 px-2 sm:px-8 rounded-lg w-11/12 sm:w-1/2 mb-0 sm:mb-8 backdrop-blur-sm">
 						<p className="font-extrabold text-4xl text-center sm:text-left text-neutral-100 leading-none">{`WHAT I'M UP TO`}</p>
 						<p className="font-bold text-lg text-center sm:text-left text-neutral-300 mb-10 leading-none">
 							my{" "}
@@ -348,19 +348,19 @@ export const Portfolio = () => {
 							</a>{" "}
 							goes into more detail
 						</p>
-						<motion.table className="w-full text-lg sm:text-[1.5vw] mb-10">
+						<motion.table className="w-full text-lg sm:text-[1.5vw] mb-0 sm:mb-10">
 							{workItems.map((item, index) => (
 								<WorkItem key={item.date} {...item} />
 							))}
 						</motion.table>
 					</div>
 					<div className="w-1/2 hidden md:block">
-						<div className="bg-black/30 py-6 px-8 rounded-lg backdrop-blur-sm w-3/5 flex flex-col items-center justify-center">
+						<div className="bg-black/30 py-6 px-8 rounded-lg backdrop-blur-sm flex flex-col items-center justify-center">
 							<p className="w-full font-extrabold text-lg sm:text-2xl mb-8 text-neutral-100">
 								WHAT I LOVE USING
 							</p>
 							<motion.div
-								className="w-full flex flex-wrap sm:grid sm:grid-flow-col sm:auto-cols-max space-x-8 sm:gap-4"
+								className="flex justify-between w-full px-10"
 								variants={containerVariants}
 								initial="hidden"
 								whileInView="visible"
