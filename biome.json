@@ -1,4 +1,7 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
-  "organizeImports": { "enabled": true }
+	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+	"organizeImports": { "enabled": true },
+	"files": {
+		"ignore": ["out", "node_modules", ".next", "pnpm-lock.yaml"]
+	}
 }
