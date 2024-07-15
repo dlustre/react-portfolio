@@ -1,5 +1,5 @@
 "use client";
-import { Transition, Variants } from "framer-motion";
+import type { Transition, Variants } from "framer-motion";
 import { motion } from "framer-motion";
 import React from "react";
 
@@ -31,6 +31,7 @@ const MotionIcon = ({ d }: { d: string }) => (
 		viewBox="0 0 24 24"
 		className="size-[20vw] sm:size-[2.5vw]"
 	>
+		<title>Icon</title>
 		<motion.path variants={svgVariants} d={d} />
 	</svg>
 );
@@ -51,6 +52,7 @@ const workItems = [
 					href="https://github.com/icssc/ZotMeal"
 					target="_blank"
 					className="font-bold text-sky-400 hover:underline"
+					rel="noreferrer"
 				>
 					ZOTMEAL
 				</a>
@@ -112,6 +114,7 @@ const AnimatedLetters = ({ title }: { title: string }) => (
 		viewport={{ once: true }}
 	>
 		{title.split("").map((letter, index) => (
+			// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 			<motion.div key={index} variants={letterVariants}>
 				{letter}
 			</motion.div>
@@ -164,7 +167,7 @@ export const Portfolio = () => {
 		const img = new Image();
 		img.src = bgImageUrl;
 		img.onload = () => setImageLoaded(true);
-	}, [bgImageUrl]);
+	}, []);
 
 	const sectionTitles = ["ABOUT", "WORK"];
 
@@ -187,9 +190,9 @@ export const Portfolio = () => {
 			<motion.div className="overflow-hidden border select-none flex items-center justify-center p-8 m-4 sm:m-0">
 				{"dlustre".split("").map((letter, index) => (
 					<motion.div
-						key={index}
+						key={letter}
 						variants={letterVariants}
-						className={`dark:text-neutral-100 text-neutral-900 font-bold text-5xl sm:text-[2vw] overflow-hidden p-4 sm:p-8`}
+						className="dark:text-neutral-100 text-neutral-900 font-bold text-5xl sm:text-[2vw] overflow-hidden p-4 sm:p-8"
 						onAnimationComplete={() =>
 							setTimeout(() => setAnimationEnd(true), 1000)
 						}
@@ -229,9 +232,9 @@ export const Portfolio = () => {
 						},
 					}}
 				>
-					{sectionTitles.map((_, index) => (
+					{sectionTitles.map((title, index) => (
 						<motion.button
-							key={index}
+							key={title}
 							onClick={() => setActiveCard(index)}
 							className={`${
 								activeCard === index ? "opacity-100" : "opacity-25"
@@ -241,7 +244,7 @@ export const Portfolio = () => {
 				</motion.div>
 			</div>
 			<motion.div
-				className={`bg-[url(/AU-FG-Texture6-8K.jpg)] bg-contain h-screen w-screen overflow-hidden overscroll-none`}
+				className="bg-[url(/AU-FG-Texture6-8K.jpg)] bg-contain h-screen w-screen overflow-hidden overscroll-none"
 				initial={{
 					opacity: 0,
 				}}
@@ -254,6 +257,7 @@ export const Portfolio = () => {
 				}}
 			>
 				<button
+					type={undefined}
 					onClick={() =>
 						setActiveCard((prevCard) => (prevCard > 0 ? prevCard - 1 : 0))
 					}
@@ -269,6 +273,7 @@ export const Portfolio = () => {
 					/>
 				</button>
 				<button
+					type={undefined}
 					onClick={() => {
 						if (activeCard < sectionTitles.length - 1) {
 							setActiveCard((prevCard) => prevCard + 1);
@@ -283,7 +288,7 @@ export const Portfolio = () => {
 					<img width={40} src="/double-down.png" alt="double down" />
 				</button>
 				<motion.div
-					className={`flex flex-col items-center justify-center w-screen h-screen text-neutral-100`}
+					className="flex flex-col items-center justify-center w-screen h-screen text-neutral-100"
 					initial={{
 						opacity: 0,
 					}}
@@ -319,7 +324,7 @@ export const Portfolio = () => {
 					</div>
 				</motion.div>
 				<motion.div
-					className={`flex flex-col items-center justify-center w-screen h-screen text-neutral-100`}
+					className="flex flex-col items-center justify-center w-screen h-screen text-neutral-100"
 					initial={{
 						opacity: 0,
 					}}
@@ -337,14 +342,15 @@ export const Portfolio = () => {
 								href="/LaTeX/resume.pdf"
 								target="_blank"
 								className="italic font-extrabold text-[rgb(5,5,5)] transition-all px-1 leading-loose bg-blue-500 hover:bg-neutral-100"
+								rel="noreferrer"
 							>
 								resume
-							</a>
-							{` goes into more detail`}
+							</a>{" "}
+							goes into more detail
 						</p>
 						<motion.table className="w-full text-lg sm:text-[1.5vw] mb-10">
 							{workItems.map((item, index) => (
-								<WorkItem key={index} {...item} />
+								<WorkItem key={item.date} {...item} />
 							))}
 						</motion.table>
 					</div>
@@ -372,7 +378,7 @@ export const Portfolio = () => {
 					</div>
 				</motion.div>
 				<motion.div
-					className={`flex flex-col items-center justify-center gap-4 w-screen h-screen text-neutral-100`}
+					className="flex flex-col items-center justify-center gap-4 w-screen h-screen text-neutral-100"
 					initial={{
 						opacity: 0,
 					}}
