@@ -1,3 +1,5 @@
 import { Portfolio } from "@/components/Portfolio";
 
-export default () => <Portfolio />;
+export default function Page() {
+	return <Portfolio />;
+}
